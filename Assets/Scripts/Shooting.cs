@@ -58,7 +58,7 @@ public class Shooting : MonoBehaviour
         }
 
 
-        Vector3 randomPosition = bulletSpawnPoint.position + new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), 0f);
+        Vector3 randomPosition = bulletSpawnPoint.position + new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-4f, 4f));
 
   
         GameObject numberObject = new GameObject("Number");
@@ -75,7 +75,7 @@ public class Shooting : MonoBehaviour
     IEnumerator MoveNumberObject(Transform transform, Vector3 direction, float duration)
     {
         Vector3 startPosition = transform.position;
-        Vector3 targetPosition = startPosition + direction;
+        Vector3 targetPosition = startPosition + direction+ new Vector3(0f,5f,0f);
 
         float elapsed = 0f;
 
